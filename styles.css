@@ -1,10 +1,26 @@
 body {
-    font-family: 'Dancing Script', cursive;
+    font-family: helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: #232323;
 }
 
+h1 {
+    font-family: 'Londrina Shadow', cursive;
+    font-size: 75px;
+    text-align: center;
+    margin: 60px 0 0 0;
+    color: #aaaaaa;
+}
 
-div{
-    position:relative;
+h2 {
+    text-align: center;
+    margin: 0px 0 70px 0;
+    color: #bbbbbb;
+}
+
+div {
+    position: relative;
     height: 200px;
     background-size: cover;
     margin: 0 auto;
@@ -13,8 +29,25 @@ div{
     border-radius: 12px;
 }
 
-p{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.price {
+    float: right;
+}
+
+small {
+    opacity: 0;
+}
+
+.show-description p {
+    height: 150px;
+}
+
+.show-description small {
+    opacity: 1;
+}
+
+p {
+    height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     padding: 10px;
     text-align: justify;
@@ -22,16 +55,45 @@ p{
     color: rgba(255, 255, 255, 1);
     background: rgba(0, 0, 0, 1);
     position: absolute;
-    bottom:0;
+    bottom: 0;
     margin: 0;
-  }
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+    transition: height .5s;
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+}
 
-.first{
+.first {
     background-image: url('http://dash.ga.co/assets/firstcourse.jpg');
 }
-.second{
+
+.second {
     background-image: url('http://dash.ga.co/assets/secondcourse.jpg');
 }
-.dessert{
+
+.dessert {
     background-image: url('http://dash.ga.co/assets/dessertcourse.jpg');
+}
+
+@media(max-width:500px) {
+    h1 {
+        font-size: 50px;
+        margin-top: 20px;
+        line-height: 40px;
+    }
+    h2 {
+        font-size: 20px;
+        margin: 20px 0 30px 0;
+    }
+    div {
+        margin: 20px 12px 0 12px;
+    }
+    p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    small {
+        font-size: 16px;
+    }
 }
